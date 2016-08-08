@@ -4,10 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+// routes
 var appRoutes = require('./routes/app');
-
+// server
 var app = express();
+
+// mongo db
+var mongoose = require('mongoose');
+var db = 'mongodb://localhost/learnAngular';
+mongoose.connect(db);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
