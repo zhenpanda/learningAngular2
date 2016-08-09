@@ -3,36 +3,7 @@ var router = express.Router();
 var User = require('../models/user');
 
 router.get('/', function (req, res, next) {
-  res.render('index');
+    res.render('index');
 });
-
-// router.get('/', function(req, res, next) {
-//     // res.render('index');
-//     var email = "";
-//     User.findOne({}, function(err, doc) {
-//       if(err) {
-//         return res.send('Error');
-//       }
-//       if(doc) {
-//         email = doc.email;
-//       }
-//       res.render('node', {email: email});
-//     });
-// });
-//
-// router.post('/', function(req, res, next){
-//     console.log(email);
-//     var email = req.body.email;
-//     // create user obj
-//     var user = new User({
-//       firstName: 'Zhen',
-//       lastName: 'Z',
-//       password: 'secret',
-//       email: email
-//     });
-//     user.save();
-//
-//     res.redirect('/');
-// });
 
 module.exports = router;
